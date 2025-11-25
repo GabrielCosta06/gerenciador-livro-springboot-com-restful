@@ -160,14 +160,19 @@ spring.jpa.hibernate.ddl-auto=update<br>
 --------------------
 
 🤝 Como contribuir<br>
-    1. Faça um fork do repositório<br>
-    2. Crie uma branch com sua feature:<br>
-    git checkout -b minha-feature<br>
-    3. Faça commit das suas alterações:<br>
-    git commit -m "Minha nova feature"<br>
-    4. Envie para seu repositório:<br>
-    git push origin minha-feature<br>
-    5. Abra um Pull Request<br>
+
+1. Faça um fork do repositório<br>
+
+2. Crie uma branch com sua feature:<br>
+git checkout -b minha-feature<br>
+
+3. Faça commit das suas alterações:<br>
+git commit -m "Minha nova feature"<br>
+
+4. Envie para seu repositório:<br>
+git push origin minha-feature<br>
+
+5. Abra um Pull Request<br>
 
 --------------------
 
