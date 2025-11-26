@@ -13,11 +13,11 @@ Desenvolvida com *Spring Boot*, seguindo boas práticas de arquitetura, validaç
 
 ## ✨ Funcionalidades
 
-- 📘 Cadastrar novos livros  
-- 📚 Listar todos os livros  
-- 🔍 Buscar livro por ID  
-- ✏ Atualizar informações do livro  
-- 🗑 Remover livro do sistema  
+- Cadastrar novos livros  
+- Listar todos os livros  
+- Buscar livro por ID  
+- Atualizar informações do livro  
+- Remover livro do sistema  
 
 ---
 
@@ -35,17 +35,31 @@ Desenvolvida com *Spring Boot*, seguindo boas práticas de arquitetura, validaç
 
 ## 📂 Estrutura do Projeto
 
-src/<br>
-└── main/<br>
-├── java/<br>
-│ └── com.example<br>
-│ ├── controller/ # Endpoints REST<br>
-│ ├── model/ # Entidades JPA<br>
-│ ├── repository/ # Interface JPA Repository<br>
-│ └── service/ # Regras de negócio<br>
-└── resources/<br>
-├── application.properties # Configurações<br>
-└── data.sql (opcional) # Dados iniciais<br>
+<pre>src/<br>
+  └── main/<br>
+      ├── java/<br>
+      |   └── com.example.livros<br>
+      |      ├── config<br>
+      |      |      └── OpenApiConfig<br>
+      |      ├── domain<br>
+      |      |      └── Book<br>
+      |      ├── dto<br>
+      |      |      └── BookRequest<br>
+      |      |      └── BookResponse<br>
+      |      ├── exception<br>
+      |      |      └── ApiExceptionHandler<br>
+      |      |      └── DuplicateResourceException<br>
+      |      |      └── ResourceNotFoundException<br>
+      |      ├── mapper<br>
+      |      |      └── BookMapper<br>
+      |      ├── repository<br>
+      |      |      └── BookRepository<br>
+      |      ├── service<br>
+      |      |      └── BookService<br>
+      |      └── web<br>
+      |              └── GerenciadorDeLivrosApplication<br>
+      └── resources<br>
+             └──application.properties<br></pre>
 
 ---
 
@@ -66,9 +80,6 @@ cd gerenciador-livro-springboot-com-restful
 
 # Compilar e rodar
 mvn spring-boot:run
-
-A API estará disponível em:
-http://localhost:8080
 
 --------------------
 
@@ -149,13 +160,13 @@ spring.jpa.hibernate.ddl-auto=update<br>
 --------------------
 
 📈 Melhorias Futuras (Roadmap)<br>
-    • 🔐 Autenticação com JWT<br>
-    • 📄 Documentação com Swagger (OpenAPI)<br>
-    • 📦 Paginação e ordenação<br>
-    • 🧪 Testes unitários e de integração<br>
-    • 🖼 Upload da capa do livro<br>
-    • 🧵 Suporte a múltiplas categorias de livros<br>
-    • 🌐 Deploy em container Docker<br>
+    • Autenticação com JWT<br>
+    • Documentação com Swagger (OpenAPI)<br>
+    • Paginação e ordenação<br>
+    • Testes unitários e de integração<br>
+    • Upload da capa do livro<br>
+    • Suporte a múltiplas categorias de livros<br>
+    • Deploy em container Docker<br>
 
 --------------------
 
