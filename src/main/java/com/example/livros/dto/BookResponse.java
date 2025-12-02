@@ -1,10 +1,21 @@
 package com.example.livros.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class BookResponse {
+    @Schema(description = "Identificador unico do livro", example = "1")
     private Long id;
+
+    @Schema(description = "Titulo do livro", example = "Clean Code")
     private String titulo;
+
+    @Schema(description = "Autor do livro", example = "Robert C. Martin")
     private String autor;
+
+    @Schema(description = "Ano de publicacao (formato YYYY)", example = "2009")
     private Integer anoPublicacao;
+
+    @Schema(description = "Codigo ISBN que identifica o livro", example = "9780132350884")
     private String isbn;
 
     public BookResponse() {}

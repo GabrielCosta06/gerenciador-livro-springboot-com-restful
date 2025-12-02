@@ -1,17 +1,22 @@
 package com.example.livros.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 
 public class BookRequest {
+    @Schema(description = "Titulo do livro", example = "Clean Code")
     @NotBlank @Size(max = 200)
     private String titulo;
 
+    @Schema(description = "Autor do livro", example = "Robert C. Martin")
     @NotBlank @Size(max = 120)
     private String autor;
 
+    @Schema(description = "Ano de publicacao (formato YYYY)", example = "2009")
     @Positive @Max(2100)
     private Integer anoPublicacao;
 
+    @Schema(description = "Codigo ISBN que identifica o livro", example = "9780132350884")
     @NotBlank @Size(max = 20)
     private String isbn;
 
